@@ -1,0 +1,34 @@
+{
+	"manifest_version": 2,
+	"name": "Your cursor can be ...",
+	"description": "...pig, pokeball and saber!",
+	"version": "1.0",
+
+	"content_scripts": [
+		{
+		"matches": ["http://*/*", "https://*/*"],
+		"js": ["page.js"]
+		}
+	],
+
+	"icons": {
+		"16": "Pic.png",
+		"48": "Pic.png",
+		"128": "Pic.png"
+	},
+
+	"permissions": [
+		"storage",
+		"clipboardRead"
+	],
+
+	"browser_action": {
+		"default_icon": "Pic.png",
+		"default_popup": "popup.html",
+		"default_title": "Cursor Change"
+	},
+
+	"web_accessible_resources": [
+		"cursors/*"
+	]
+}
